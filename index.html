@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  .center-text {
+    text-align: center;
+    animation: colorChange 5s infinite;
+  }
+.boxed-link {
+display: inline-block;
+font-weight: bold;
+padding: 5px 10px;
+border: 2px solid rgb(0, 0, 0);
+text-decoration: none;
+}
+
+.boxed-link:hover {
+background-color: rgb(211, 211, 211);
+}
+
+.font-montserrat {
+font-family: 'Montserrat', sans-serif;
+}
+
+@keyframes colorChange {
+0% { color: rgb(226, 49, 43); }
+33% { color: rgb(43, 130, 226); }
+67% { color: rgb(43, 226, 61); }
+100% { color: rgb(226, 49, 43); }
+}
+
+/* 新增样式 */
+.hidden-message {
+display: none;
+text-align: left;
+font-size: 16px;
+margin-top: 20px;
+color: rgb(43, 226, 61);
+width: 80%;
+margin: 0 auto;
+}
+
+.show-message {
+display: block;
+}
+
+.button-container {
+position: fixed;
+bottom: 20px;
+right: 20px;
+}
+.rule-list {
+list-style-type: disc;
+padding-left: 20px;
+}
+
+</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<script>
+function displayMessage() {
+  var messageElement = document.getElementById("message");
+  messageElement.classList.toggle("show-message");
+}
+</script>
+</head>
+<body>
+  <h2 class="center-text font-montserrat">Man and machine backgammon battle</h2>
+  <p class="center-text">Let's Get Start!</p>
+  <div class="center-text">
+    <a href="https://godmakerr.github.io/godmakerr.gthub.io/" class="boxed-link">START</a>
+  </div>
+  <div class="center-text">
+    <img src="ims.png" alt="Footer Image">
+  </div>
+  <div class="button-container">
+    <button onclick="displayMessage()">Learn about the rules</button>
+  </div>
+  <ul id="message" class="center-text hidden-message rule-list">
+    <li>The competition adopts a single-game elimination system. The top two teams in the group advance to the semifinals for a cross-elimination round, with the winner competing for the championship and the loser competing for third place.</li>
+    <li>The first round of the game is limited to 15 minutes per person, from the second round of the game to 30 minutes per person, and from the final round to 45 minutes per person.</li>
+    <li>Black first, white first, starting from Tian Yuan, falling in order with each other.</li>
+    <li>The first side to form a continuous five pieces of the same color or more than five pieces [only for white chess] on the board horizontally, vertically or obliquely wins. If the winner cannot be decided within the specified time limit, the one with less time in the game wins.</li>
+  </ul>
+</body>
+</html>
